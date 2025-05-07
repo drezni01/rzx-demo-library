@@ -4,7 +4,6 @@ import { RzxCommonDialogModel } from "./dialogs/RzxDialog";
 class RzxAppModel {
   @observable isBusy = false;
   @observable commonDialog = new RzxCommonDialogModel();
-  private removeLater: boolean;
 
   constructor() {
     makeObservable(this);
