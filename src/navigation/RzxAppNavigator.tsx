@@ -1,6 +1,6 @@
 import {createBrowserRouter, NavigateFunction} from 'react-router-dom';
-import {RzxDesktopApp} from '../application/RzxApplication';
-import {RzxSideNavItem} from '../application/RzxApplicationSpec';
+import {RzxSideNavItem} from '../application/RzxAppSpec';
+import {RzxpAppComponent} from '../application/RzxApp';
 
 export class RzxAppNavigator {
     router;
@@ -13,7 +13,7 @@ export class RzxAppNavigator {
         this.router = createBrowserRouter([
             {
                 path: '/',
-                element: <RzxDesktopApp />,
+                element: <RzxpAppComponent />,
                 children: this.navItems
             }
         ]);

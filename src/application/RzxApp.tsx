@@ -1,16 +1,22 @@
 import {observer} from 'mobx-react';
-import rzxAppModel, {RzxApplicationModel} from './RzxApplicationModel';
+import rzxAppModel, {RzxAppModel} from './RzxAppModel';
 import {Classes, Overlay2, OverlaysProvider, Spinner} from '@blueprintjs/core';
 import {RzxCommonDialog} from '../dialogs/RzxDialog';
-import {Navigate, Outlet, useNavigate} from 'react-router-dom';
-import './RzxApplication.scss';
+import {Navigate, Outlet, RouterProvider, useNavigate} from 'react-router-dom';
+import './RzxApp.scss';
 import {RzxSideNav} from '../navigation/RzxSideNav';
+import {RzxAppSpec} from './RzxAppSpec';
 
-export function RzxDesktopApp() {
-    return <AppContainer model={rzxAppModel} />;
+export function RzxpAppComponent() {
+    return <RzxAppContainer model={rzxAppModel} />;
 }
 
-const AppContainer = observer(({model}: {model: RzxApplicationModel}) => {
+export const RzxApp = ({appSpec}: {appSpec: RzxAppSpec}) => {
+    rzxAppModel.configureAppplication(appSpec);
+    return <RouterProvider router={rzxAppModel.appNavigator.router} />;
+};
+
+const RzxAppContainer = observer(({model}: {model: RzxAppModel}) => {
     rzxAppModel.appNavigator.navigate = useNavigate();
 
     return (

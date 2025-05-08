@@ -1,9 +1,9 @@
 import {action, makeObservable, observable} from 'mobx';
 import {RzxCommonDialogModel} from '../dialogs/RzxDialogModel';
 import {RzxAppNavigator} from '../navigation/RzxAppNavigator';
-import {RzxApplicationSpec, RzxAppTheme} from './RzxApplicationSpec';
+import {RzxAppSpec, RzxAppTheme} from './RzxAppSpec';
 
-export class RzxApplicationModel {
+export class RzxAppModel {
     @observable isBusy = false;
     @observable commonDialog = new RzxCommonDialogModel();
     appNavigator: RzxAppNavigator;
@@ -13,17 +13,15 @@ export class RzxApplicationModel {
         makeObservable(this);
     }
 
-    configureAppplication(appSpec: RzxApplicationSpec) {
+    configureAppplication(appSpec: RzxAppSpec) {
         this.theme = appSpec.theme;
+        this.setTheme();
         this.appNavigator = new RzxAppNavigator(appSpec.navItems);
     }
 
     @action toggleTheme() {
         this.theme = this.theme === RzxAppTheme.DARK ? RzxAppTheme.LIGHT : RzxAppTheme.DARK;
-
-        const classList = document.body.classList;
-        classList.toggle('rzx-dark', this.theme === RzxAppTheme.DARK);
-        classList.toggle('bp5-dark', this.theme === RzxAppTheme.DARK);
+        this.setTheme();
     }
 
     @action showMask() {
@@ -53,7 +51,13 @@ export class RzxApplicationModel {
     error(message: string, title?: string) {
         this.commonDialog.open({message, title, isError: true});
     }
+
+    private setTheme() {
+        const classList = document.body.classList;
+        classList.toggle('rzx-dark', this.theme === RzxAppTheme.DARK);
+        classList.toggle('bp5-dark', this.theme === RzxAppTheme.DARK);
+    }
 }
 
-const rzxAppModel = new RzxApplicationModel();
+const rzxAppModel = new RzxAppModel();
 export default rzxAppModel;

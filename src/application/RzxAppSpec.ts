@@ -1,6 +1,6 @@
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 
-export type RzxApplicationSpec = {
+export type RzxAppSpec = {
     theme: RzxAppTheme;
     navItems: RzxSideNavItem[];
 };

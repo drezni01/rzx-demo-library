@@ -8,6 +8,7 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: var(--rzx-box-shadow);
 
     svg {
         margin-right: var(--rzx-margin);
