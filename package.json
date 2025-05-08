@@ -4,6 +4,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "main": "index.js",
   "dependencies": {
     "@blueprintjs/core": "^5.19.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
