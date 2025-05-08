@@ -1,0 +1,66 @@
+.side-nav {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: var(--rzx-text-color);
+    background-color: var(--rzx-toolbar-color);
+    border-left: 1px solid var(--rzx-active-color);
+    border-right: 1px solid var(--rzx-active-color);
+    border-top: 1px solid var(--rzx-active-color);
+}
+
+.side-nav__items {
+    height: calc(100% - 50px);
+    padding-top: 20px;
+
+    .theme-switcher {
+        position: absolute;
+        bottom: 0;
+    }
+
+    div {
+        padding: var(--rzx-padding-double);
+        color: var(--rzx-text-muted-color);
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+    .tooltip {
+        visibility: hidden;
+        width: 120px;
+        background-color: var(--rzx-toolbar-color);
+        color: var(--rzx-text-color);
+        text-align: center;
+        padding: var(--rzx-padding) 0;
+        border: 1px solid var(--rzx-active-color);
+        border-radius: 3px;
+
+        position: absolute;
+        z-index: 1;
+        left: 45px;
+        top: 5px;
+    }
+
+    .tooltip::after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent var(--rzx-active-color) transparent transparent;
+    }
+
+    div:hover {
+        color: var(--rzx-text-color);
+        cursor: pointer;
+    }
+    div:hover .tooltip {
+        visibility: visible;
+    }
+}
