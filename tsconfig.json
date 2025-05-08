@@ -16,6 +16,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "composite": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./build/types",
     "jsx": "react-jsx",
     "outDir": "dist",
     "rootDir": "src"
