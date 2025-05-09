@@ -1,0 +1,163 @@
+.rzx-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  padding: var(--rzx-padding) var(--rzx-padding-double);
+  //background-color: var(--rzx-intent-none);
+  color: var(--rzx-text-color);
+  border: 1px solid var(--rzx-intent-none);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--rzx-box-shadow);
+
+  &__none {
+    color: var(--rzx-text-color);
+    background-color: var(--rzx-intent-none);
+    border-color: var(--rzx-intent-none);
+  }
+  &__primary {
+    color: var(--rzx-text-color-inverse);
+    .rzx-dark & {
+      color: var(--rzx-text-color);
+    }
+    background-color: var(--rzx-intent-primary);
+    border-color: var(--rzx-intent-primary);
+  }
+  &__success {
+    color: var(--rzx-text-color-inverse);
+    .rzx-dark & {
+      color: var(--rzx-text-color);
+    }
+    background-color: var(--rzx-intent-success);
+    border-color: var(--rzx-intent-success);
+  }
+  &__warning {
+    color: var(--rzx-text-color-inverse);
+    .rzx-dark & {
+      color: var(--rzx-text-color);
+    }
+    background-color: var(--rzx-intent-warning);
+    border-color: var(--rzx-intent-warning);
+  }
+  &__danger {
+    color: var(--rzx-text-color-inverse);
+    .rzx-dark & {
+      color: var(--rzx-text-color);
+    }
+    background-color: var(--rzx-intent-danger);
+    border-color: var(--rzx-intent-danger);
+  }
+
+  &__no-outline {
+    border: none;
+  }
+
+  &__minimal {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &__compact {
+    padding-left: 10px;
+    &.rzx-button__icon-only {
+      padding-left: 6px;
+    }
+  }
+
+  svg {
+    margin-right: var(--rzx-margin);
+  }
+}
+
+.rzx-button:hover {
+  cursor: pointer;
+}
+
+.rzx-button__none:hover {
+  color: var(--rzx-text-color);
+  background-color: var(--rzx-intent-none-active);
+  border-color: var(--rzx-intent-none-active);
+}
+
+.rzx-button__primary:hover {
+  color: var(--rzx-text-color-inverse);
+  .rzx-dark & {
+    color: var(--rzx-text-color);
+  }
+  background-color: var(--rzx-intent-primary-active);
+  border-color: var(--rzx-intent-primary-active);
+}
+.rzx-button__success:hover {
+  color: var(--rzx-text-color-inverse);
+  .rzx-dark & {
+    color: var(--rzx-text-color);
+  }
+  background-color: var(--rzx-intent-success-active);
+  border-color: var(--rzx-intent-success-active);
+}
+.rzx-button__warning:hover {
+  color: var(--rzx-text-color-inverse);
+  .rzx-dark & {
+    color: var(--rzx-text-color);
+  }
+  background-color: var(--rzx-intent-warning-active);
+  border-color: var(--rzx-intent-warning-active);
+}
+.rzx-button__danger:hover {
+  color: var(--rzx-text-color-inverse);
+  .rzx-dark & {
+    color: var(--rzx-text-color);
+  }
+  background-color: var(--rzx-intent-danger-active);
+  border-color: var(--rzx-intent-danger-active);
+}
+
+.rzx-button__none:active {
+  background-color: var(--rzx-intent-none-action);
+  border-color: var(--rzx-intent-none-active);
+}
+.rzx-button__primary:active {
+  background-color: var(--rzx-intent-primary-action);
+  border-color: var(--rzx-intent-primary-active);
+}
+.rzx-button__success:active {
+  background-color: var(--rzx-intent-success-action);
+  border-color: var(--rzx-intent-success-active);
+}
+.rzx-button__warning:active {
+  background-color: var(--rzx-intent-warning-action);
+  border-color: var(--rzx-intent-warning-active);
+}
+.rzx-button__danger:active {
+  background-color: var(--rzx-intent-danger-action);
+  border-color: var(--rzx-intent-danger-active);
+}
+
+.tooltip {
+  height: 28px;
+  visibility: hidden;
+  background-color: var(--rzx-toolbar-color);
+  color: var(--rzx-text-color);
+  text-align: center;
+  white-space: nowrap;
+  padding: 0px var(--rzx-padding);
+  border: 1px solid var(--rzx-active-color);
+  border-radius: 3px;
+
+  position: absolute;
+  left: 50px;
+  top: 5px;
+
+  z-index: 1;
+}
+
+.rzx-button__container:hover .tooltip {
+  visibility: visible;
+}
+
+.rzx-button__container {
+  position: relative;
+}

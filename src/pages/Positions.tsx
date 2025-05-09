@@ -7,7 +7,7 @@ export function Positions() {
         <>
             <RzxToolbar
                 title="test"
-                items={[<RzxButton text="click me" />, <RzxButton text="Settings" icon={faGear} />]}
+                items={[<RzxButton text="wide button" width={160} />, <RzxButton text="Settings" icon={faGear} />]}
             />
             <div>Positions</div>
         </>

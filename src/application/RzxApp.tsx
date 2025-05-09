@@ -4,6 +4,7 @@ import {Classes, Overlay2, OverlaysProvider, Spinner} from '@blueprintjs/core';
 import {RzxCommonDialog} from '../dialogs/RzxDialog';
 import {Navigate, Outlet, RouterProvider, useNavigate} from 'react-router-dom';
 import './RzxApp.scss';
+
 import {RzxSideNav} from '../navigation/RzxSideNav';
 import {RzxAppSpec} from './RzxAppSpec';
 
