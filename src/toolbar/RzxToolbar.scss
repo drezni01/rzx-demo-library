@@ -34,9 +34,16 @@
     align-items: center;
     height: 100%;
     width: 100%;
-  }
 
-  &__items > div {
-    margin-right: var(--rzx-margin-double);
+    &__item-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-right: var(--rzx-margin-double);
+
+      //div {
+      //  margin-right: var(--rzx-margin-double);
+      //}
+    }
   }
 }

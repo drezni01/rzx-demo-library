@@ -56,6 +56,7 @@ export class RzxAppModel {
         const classList = document.body.classList;
         classList.toggle('rzx-dark', this.theme === RzxAppTheme.DARK);
         classList.toggle('bp5-dark', this.theme === RzxAppTheme.DARK);
+        document.body.dataset.agThemeMode = this.theme === RzxAppTheme.DARK ? 'dark' : 'light';
     }
 }
 

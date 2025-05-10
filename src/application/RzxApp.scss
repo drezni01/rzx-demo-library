@@ -4,7 +4,7 @@ body {
   min-height: 100% !important;
   margin: 0;
   padding: 0;
-  background-color: var(--rzx-background-color);
+  background-color: var(--rzx-bg-color);
 }
 
 body {
@@ -15,7 +15,8 @@ body {
   --rzx-toolbar-size: 42px;
   --rzx-toolbar-compact-size: 32px;
 
-  --rzx-background-color: #ffffff;
+  --rzx-bg-color: #ffffff;
+  --rzx-bg-odd-color: #f5f5f5;
   --rzx-toolbar-color: #eceff1;
   --rzx-text-color: black;
   --rzx-text-color-inverse: white;
@@ -25,6 +26,10 @@ body {
   --rzx-input-color: #eceff1;
   --rzx-mask-bg: rgba(37, 35, 35, 0.6);
   --rzx-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  --rzx-border-color: #eeeeee;
+  --rzx-grid-header-bg-color: #f9fafa;
+  --rzx-grid-bg-hover-color: #c4e2f7;
+  --rzx-grid-bg-select-color: #a6d5f8;
 
   --rzx-intent-none: #f9fafa;
   --rzx-intent-none-active: #cdd6d6;
@@ -47,7 +52,8 @@ body {
   --rzx-intent-danger-action: #4e0f0f;
 
   &.rzx-dark {
-    --rzx-background-color: #111;
+    --rzx-bg-color: #111;
+    --rzx-bg-odd-color: #151e23;
     --rzx-toolbar-color: #1f2326;
     --rzx-text-color: white;
     --rzx-text-color-inverse: black;
@@ -56,6 +62,10 @@ body {
     --rzx-click-color: #555;
     --rzx-input-color: #222;
     --rzx-mask-bg: rgba(37, 35, 35, 0.6);
+    --rzx-border-color: #293233;
+    --rzx-grid-header-bg-color: #1f2326;
+    --rzx-grid-bg-hover-color: #1d3f50;
+    --rzx-grid-bg-select-color: #225067;
 
     --rzx-intent-none: #495a5a;
     --rzx-intent-none-active: #374646;
@@ -110,7 +120,7 @@ body {
   height: 100%;
   margin-left: var(--rzx-toolbar-size);
   color: var(--rzx-text-color);
-  background-color: var(--rzx-background-color);
+  background-color: var(--rzx-bg-color);
 }
 
 .mask {

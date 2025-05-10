@@ -14,12 +14,18 @@ export const RzxToolbar = (props: RzxToolbarProps) => {
     return (
         <div className={className}>
             <div className={`rzx-toolbar__title ${compact ? 'compact' : ''}`}>{props.title}</div>{' '}
-            {props.title && <div className={'rzx-toolbar__separator'}></div>}
+            {props.title && RzxToolbarSeparator()}
             <div className={'rzx-toolbar__items'}>
                 {props.items?.map((item, idx) => (
-                    <div key={idx}>{item}</div>
+                    <div className="rzx-toolbar__items__item-container" key={idx}>
+                        {item}
+                    </div>
                 ))}
             </div>
         </div>
     );
+};
+
+export const RzxToolbarSeparator = () => {
+    return <div className={'rzx-toolbar__separator'}></div>;
 };
