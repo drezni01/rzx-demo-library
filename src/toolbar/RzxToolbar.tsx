@@ -14,7 +14,6 @@ export const RzxToolbar = (props: RzxToolbarProps) => {
     return (
         <div className={className}>
             <div className={`rzx-toolbar__title ${compact ? 'compact' : ''}`}>{props.title}</div>{' '}
-            {props.title && RzxToolbarSeparator()}
             <div className={'rzx-toolbar__items'}>
                 {props.items?.map((item, idx) => (
                     <div className="rzx-toolbar__items__item-container" key={idx}>

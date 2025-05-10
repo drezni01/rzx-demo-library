@@ -16,7 +16,7 @@ export class RzxCommonDialogModel {
     @observable message: string;
     @observable icon: IconProp;
     @observable hasCancelButton: boolean;
-    @observable additionalClass: string;
+    additionalClass: string;
     private resolver: (value: boolean) => void;
 
     constructor() {

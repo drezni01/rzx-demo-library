@@ -16,7 +16,7 @@
   &__none {
     color: var(--rzx-text-color);
     background-color: var(--rzx-intent-none);
-    border-color: var(--rzx-intent-none);
+    border-color: var(--rzx-intent-none-active);
   }
   &__primary {
     color: var(--rzx-text-color-inverse);
@@ -24,7 +24,7 @@
       color: var(--rzx-text-color);
     }
     background-color: var(--rzx-intent-primary);
-    border-color: var(--rzx-intent-primary);
+    border-color: var(--rzx-intent-primary-active);
   }
   &__success {
     color: var(--rzx-text-color-inverse);
@@ -32,7 +32,7 @@
       color: var(--rzx-text-color);
     }
     background-color: var(--rzx-intent-success);
-    border-color: var(--rzx-intent-success);
+    border-color: var(--rzx-intent-success-active);
   }
   &__warning {
     color: var(--rzx-text-color-inverse);
@@ -40,7 +40,7 @@
       color: var(--rzx-text-color);
     }
     background-color: var(--rzx-intent-warning);
-    border-color: var(--rzx-intent-warning);
+    border-color: var(--rzx-intent-warning-active);
   }
   &__danger {
     color: var(--rzx-text-color-inverse);
@@ -48,7 +48,7 @@
       color: var(--rzx-text-color);
     }
     background-color: var(--rzx-intent-danger);
-    border-color: var(--rzx-intent-danger);
+    border-color: var(--rzx-intent-danger-active);
   }
 
   &__no-outline {
@@ -79,7 +79,7 @@
 .rzx-button__none:hover {
   color: var(--rzx-text-color);
   background-color: var(--rzx-intent-none-active);
-  border-color: var(--rzx-intent-none-active);
+  border-color: var(--rzx-intent-none-action);
 }
 
 .rzx-button__primary:hover {
@@ -88,7 +88,7 @@
     color: var(--rzx-text-color);
   }
   background-color: var(--rzx-intent-primary-active);
-  border-color: var(--rzx-intent-primary-active);
+  border-color: var(--rzx-intent-primary-action);
 }
 .rzx-button__success:hover {
   color: var(--rzx-text-color-inverse);
@@ -96,7 +96,7 @@
     color: var(--rzx-text-color);
   }
   background-color: var(--rzx-intent-success-active);
-  border-color: var(--rzx-intent-success-active);
+  border-color: var(--rzx-intent-success-action);
 }
 .rzx-button__warning:hover {
   color: var(--rzx-text-color-inverse);
@@ -104,7 +104,7 @@
     color: var(--rzx-text-color);
   }
   background-color: var(--rzx-intent-warning-active);
-  border-color: var(--rzx-intent-warning-active);
+  border-color: var(--rzx-intent-warning-action);
 }
 .rzx-button__danger:hover {
   color: var(--rzx-text-color-inverse);
@@ -112,7 +112,7 @@
     color: var(--rzx-text-color);
   }
   background-color: var(--rzx-intent-danger-active);
-  border-color: var(--rzx-intent-danger-active);
+  border-color: var(--rzx-intent-danger-action);
 }
 
 .rzx-button__none:active {
@@ -143,7 +143,7 @@
   color: var(--rzx-text-color);
   text-align: center;
   white-space: nowrap;
-  padding: 0px var(--rzx-padding);
+  padding: var(--rzx-padding);
   border: 1px solid var(--rzx-active-color);
   border-radius: 3px;
 

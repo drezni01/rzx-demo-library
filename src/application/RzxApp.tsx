@@ -4,9 +4,12 @@ import {Classes, Overlay2, OverlaysProvider, Spinner} from '@blueprintjs/core';
 import {RzxCommonDialog} from '../dialogs/RzxDialog';
 import {Navigate, Outlet, RouterProvider, useNavigate} from 'react-router-dom';
 import './RzxApp.scss';
-
 import {RzxSideNav} from '../navigation/RzxSideNav';
 import {RzxAppSpec} from './RzxAppSpec';
+
+export function DesktopApp() {
+    return <RzxAppContainer model={rzxAppModel} />;
+}
 
 export function RzxpAppComponent() {
     return <RzxAppContainer model={rzxAppModel} />;
@@ -23,7 +26,7 @@ const RzxAppContainer = observer(({model}: {model: RzxAppModel}) => {
     return (
         <>
             <OverlaysProvider>
-                <div className="desktop bp5-dark">
+                <div className="desktop">
                     <RzxSideNav model={rzxAppModel} />
                     <div className="main">
                         <Outlet />
@@ -39,6 +42,7 @@ const RzxAppContainer = observer(({model}: {model: RzxAppModel}) => {
                     >
                         <div className="mask-body">
                             <Spinner size={50} style={{margin: 'auto'}} />
+                            <div className="mask-text">{model.busyText}</div>
                         </div>
                     </Overlay2>
 

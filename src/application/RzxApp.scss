@@ -1,3 +1,4 @@
+html,
 #root,
 body {
   height: 100%;
@@ -87,6 +88,10 @@ body {
     --rzx-intent-danger-active: #6c1313;
     --rzx-intent-danger-action: #4e0f0f;
   }
+}
+
+.bp5-control {
+  margin-bottom: 0px !important;
 }
 
 .bp5-dialog {
