@@ -1,0 +1,19 @@
+.code-card {
+  margin: 10px;
+  background-color: var(--rzx-toolbar-color);
+
+  .cm-content {
+    background-color: var(--rzx-bg-odd-color);
+  }
+}
+
+.ͼ2 .cm-gutters {
+  background-color: var(--rzx-toolbar-color);
+  color: var(--rzx-text-color);
+  border: none;
+}
+
+.ͼ2 .cm-activeLineGutter {
+  background-color: var(--rzx-active-color);
+  color: var(--rzx-text-color);
+}

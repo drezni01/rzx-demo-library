@@ -1,0 +1,42 @@
+.rzx-side-nav {
+  width: var(--rzx-toolbar-size);
+  height: calc(100% - 1px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: var(--rzx-text-color);
+  background-color: var(--rzx-toolbar-color);
+  border-left: 1px solid var(--rzx-active-color);
+  border-right: 1px solid var(--rzx-active-color);
+  border-top: 1px solid var(--rzx-active-color);
+
+  &__list {
+    height: calc(100% - 50px);
+
+    .rzx-button {
+      margin-left: 1px;
+      padding: var(--rzx-padding-double);
+      margin-bottom: var(--rzx-margin);
+    }
+
+    .rzx-button:last-child {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    svg {
+      font-size: 20px;
+      margin: 0px;
+    }
+  }
+}
+
+.rzx-app-icon {
+  width: 40px;
+  height: 40px;
+  padding-left: 5px;
+  padding-top: 10px;
+  color: #fb4a03;
+}

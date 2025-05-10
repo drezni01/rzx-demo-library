@@ -17,3 +17,11 @@ export enum RzxAppTheme {
     LIGHT = 'light',
     DARK = 'dark'
 }
+
+export enum VisualIntent {
+    NONE = 'none',
+    PRIMARY = 'primary',
+    SUCCESS = 'success',
+    WARNING = 'warning',
+    DANGER = 'danger'
+}

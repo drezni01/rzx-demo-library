@@ -1,0 +1,50 @@
+.rzx-toolbar {
+  height: var(--rzx-toolbar-size);
+  &__compact {
+    height: var(--rzx-toolbar-compact-size);
+  }
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--rzx-toolbar-color);
+  border: 1px solid var(--rzx-active-color);
+
+  &__separator {
+    width: 1px;
+    height: 70%;
+    border-left: 1px solid var(--rzx-active-color);
+    margin: 0 var(--rzx-margin-double);
+  }
+
+  &__title {
+    font-size: large;
+    &.compact {
+      font-size: medium;
+    }
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--rzx-text-color);
+    margin-left: var(--rzx-margin-double);
+    margin-right: var(--rzx-margin-double);
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    &__item-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-right: var(--rzx-margin-double);
+
+      //div {
+      //  margin-right: var(--rzx-margin-double);
+      //}
+    }
+  }
+}

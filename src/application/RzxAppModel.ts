@@ -5,6 +5,7 @@ import {RzxAppSpec, RzxAppTheme} from './RzxAppSpec';
 
 export class RzxAppModel {
     @observable isBusy = false;
+    @observable busyText = '';
     @observable commonDialog = new RzxCommonDialogModel();
     appNavigator: RzxAppNavigator;
     @observable theme: RzxAppTheme;
@@ -24,7 +25,8 @@ export class RzxAppModel {
         this.setTheme();
     }
 
-    @action showMask() {
+    @action showMask(text?: string) {
+        this.busyText = text;
         this.isBusy = true;
     }
 
@@ -56,6 +58,8 @@ export class RzxAppModel {
         const classList = document.body.classList;
         classList.toggle('rzx-dark', this.theme === RzxAppTheme.DARK);
         classList.toggle('bp5-dark', this.theme === RzxAppTheme.DARK);
+        classList.toggle('bp5-light', this.theme !== RzxAppTheme.DARK);
+        document.body.dataset.agThemeMode = this.theme === RzxAppTheme.DARK ? 'dark' : 'light';
     }
 }
 

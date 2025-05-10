@@ -1,0 +1,12 @@
+.code-page {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 25px 25px;
+  padding: 5px;
+  height: calc(100% - 50px);
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
