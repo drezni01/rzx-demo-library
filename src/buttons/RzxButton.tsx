@@ -3,6 +3,7 @@ import './RzxButton.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import {VisualIntent} from '../application/RzxAppSpec';
+import {Tooltip} from '@blueprintjs/core';
 
 export type RzxButtonProps = {
     text?: string;
@@ -38,21 +39,42 @@ export const RzxButton = (props: RzxButtonProps) => {
     let width = props.width;
     if (!width && !text) width = compact ? 25 : 32;
 
-    return (
-        <div className="rzx-button__container">
-            <button
-                className={className}
-                style={{
-                    width: width ? `${width}px` : 'undefined',
-                    height: props.height ? `${props.height}px` : compact ? '25px' : '32px'
-                }}
-                onClick={props.onClick}
-            >
-                {icon && <FontAwesomeIcon icon={icon} />}
-                <span>{text}</span>
-                {props.children}
-            </button>
-            {props.tooltip && <span className="tooltip">{props.tooltip}</span>}
-        </div>
+    return buttonWrapper(
+        className,
+        width,
+        props.height,
+        icon,
+        text,
+        props.tooltip,
+        compact,
+        props.onClick,
+        props.children
     );
 };
+
+function buttonWrapper(className, width, height, icon, text, tooltip, compact, onClick, children) {
+    if (!tooltip) return buttonImpl(className, width, height, icon, text, compact, onClick, children);
+    else
+        return (
+            <Tooltip content={tooltip} position="right" compact={true}>
+                {buttonImpl(className, width, height, icon, text, compact, onClick, children)}
+            </Tooltip>
+        );
+}
+
+function buttonImpl(className, width, height, icon, text, compact, onClick, children) {
+    return (
+        <button
+            className={className}
+            style={{
+                width: width ? `${width}px` : 'undefined',
+                height: height ? `${height}px` : compact ? '25px' : '32px'
+            }}
+            onClick={onClick}
+        >
+            {icon && <FontAwesomeIcon icon={icon} />}
+            <span>{text}</span>
+            {children}
+        </button>
+    );
+}
