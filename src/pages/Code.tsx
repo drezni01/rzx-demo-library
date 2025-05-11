@@ -1,9 +1,8 @@
 import './Code.scss';
 import {RzxToolbar} from '../toolbar/RzxToolbar';
-import {RzxAppTheme} from '../application/RzxAppSpec';
 import {RzxCodeSnippet} from '../codeSnippet/RzxCodeSnippet';
 
-export function Code(props: {theme: RzxAppTheme}) {
+export function Code() {
     return (
         <>
             <RzxToolbar title="Component usage examples" items={[]} />

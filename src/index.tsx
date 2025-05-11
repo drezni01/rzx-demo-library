@@ -21,7 +21,7 @@ FocusStyleManager.onlyShowFocusOnTabs();
 const appSpec: RzxAppSpec = {
     theme: RzxAppTheme.DARK,
     navItems: [
-        {title: 'Code snippets', icon: faCode, path: '/home', element: <Code theme={rzxAppModel.theme} />},
+        {title: 'Code snippets', icon: faCode, path: '/home', element: <Code />},
         {title: 'Toolbars and Buttons', icon: faBarsProgress, path: '/toolbars', element: <Toolbars />},
         {title: 'Grid w/options', icon: faTableList, path: '/positions', element: <Grid />},
         {title: 'Modals', icon: faWindowRestore, path: '/modals', element: <Dialogs />}
