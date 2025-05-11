@@ -102,7 +102,7 @@ function generateRows() {
         const position = {
             description: faker.company.name().toLocaleUpperCase(),
             ticker: faker.commerce.productName().substring(0, 4).toUpperCase(),
-            quantity: parseInt(faker.finance.amount({min: 1000, max: 100000})),
+            quantity: parseInt(faker.finance.amount(1000, 100000, 0)),
             price: Math.random() * 500,
             priceChg: 0,
             priceChgPct: 0,
@@ -112,7 +112,7 @@ function generateRows() {
 
         position.mv = position.price * position.quantity;
         position.priceChg = (Math.random() * position.price) / 100;
-        position.priceChgPct = (position.priceChg / position.price) * 100;
+        position.priceChgPct = position.priceChg / position.price;
         position.dlyPnl = position.priceChg * position.quantity;
 
         positions.push(position);
