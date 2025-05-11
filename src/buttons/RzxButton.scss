@@ -135,29 +135,3 @@
   background-color: var(--rzx-intent-danger-action);
   border-color: var(--rzx-intent-danger-active);
 }
-
-.tooltip {
-  height: 28px;
-  visibility: hidden;
-  background-color: var(--rzx-toolbar-color);
-  color: var(--rzx-text-color);
-  text-align: center;
-  white-space: nowrap;
-  padding: var(--rzx-padding);
-  border: 1px solid var(--rzx-active-color);
-  border-radius: 3px;
-
-  position: absolute;
-  left: 50px;
-  top: 5px;
-
-  z-index: 1;
-}
-
-.rzx-button__container:hover .tooltip {
-  visibility: visible;
-}
-
-.rzx-button__container {
-  position: relative;
-}
