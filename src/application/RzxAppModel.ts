@@ -14,10 +14,6 @@ export class RzxAppModel {
         makeObservable(this);
     }
 
-    static getInstance() {
-        return rzxAppModel;
-    }
-
     configureAppplication(appSpec: RzxAppSpec) {
         this.theme = appSpec.theme;
         this.setTheme();

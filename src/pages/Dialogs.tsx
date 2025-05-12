@@ -15,7 +15,7 @@ export function Dialogs() {
         <>
             <RzxToolbar
                 title="Modal feedback dialogs"
-                items={[
+                leftItems={[
                     <RzxButton
                         text="OK"
                         icon={faCheck}

@@ -8,7 +8,7 @@ export function Toolbars() {
         <>
             <RzxToolbar
                 title="top level/main toolbar"
-                items={[
+                leftItems={[
                     <RzxButton text="wide button" width={160} />,
                     <RzxButton text="Add" icon={faPlus} intent={VisualIntent.SUCCESS} outline={true} />,
                     <RzxButton text="Clone" icon={faCopy} intent={VisualIntent.NONE} outline={true} />,
@@ -28,15 +28,16 @@ export function Toolbars() {
             <RzxToolbar
                 title="compact/sub section toolbar"
                 compact={true}
-                items={[
+                leftItems={[
                     <RzxButton text="wide button" compact={true} width={130} />,
                     <RzxButton text="Add" icon={faPlus} compact={true} intent={VisualIntent.SUCCESS} />,
                     <RzxButton text="Clone" icon={faCopy} compact={true} intent={VisualIntent.NONE} />,
                     <RzxButton text="Edit" icon={faEdit} compact={true} intent={VisualIntent.PRIMARY} />,
                     <RzxButton text="Archive" icon={faArchive} compact={true} intent={VisualIntent.WARNING} />,
                     <RzxButton text="Delete" icon={faTrashCan} compact={true} intent={VisualIntent.DANGER} />,
-                    <RzxButton text="Settings" compact={true} icon={faGear} />,
-                    <RzxToolbarSeparator />,
+                    <RzxButton text="Settings" compact={true} icon={faGear} />
+                ]}
+                rightItems={[
                     <RzxButton
                         tooltip="Add"
                         icon={faPlus}

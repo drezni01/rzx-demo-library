@@ -58,8 +58,8 @@ export function Grid() {
     return (
         <>
             <RzxToolbar
-                title="test"
-                items={[
+                title="fin data using faker.js"
+                leftItems={[
                     <RzxButton
                         text="Add 10"
                         icon={faAdd}

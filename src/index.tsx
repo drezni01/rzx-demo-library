@@ -8,7 +8,6 @@ import {Toolbars} from './pages/Toolbars';
 import {ModuleRegistry, AllCommunityModule} from 'ag-grid-community';
 import {Dialogs} from './pages/Dialogs';
 import {RzxApp} from './application/RzxApp';
-import rzxAppModel from './application/RzxAppModel';
 import './index.css';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import {FocusStyleManager} from '@blueprintjs/core';
@@ -27,8 +26,6 @@ const appSpec: RzxAppSpec = {
         {title: 'Modals', icon: faWindowRestore, path: '/modals', element: <Dialogs />}
     ]
 };
-
-rzxAppModel.configureAppplication(appSpec);
 
 root.render(
     <React.StrictMode>

@@ -1,6 +1,5 @@
-.code-card {
-  margin: 10px;
-  background-color: var(--rzx-toolbar-color);
+.rzx-code-card {
+  background-color: var(--rzx-toolbar-color) !important;
 
   .cm-content {
     background-color: var(--rzx-bg-odd-color);
