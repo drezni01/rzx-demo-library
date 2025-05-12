@@ -2,9 +2,10 @@ import './RzxToolbar.scss';
 import classNames from 'classnames';
 
 export type RzxToolbarProps = {
-    title: string;
+    title?: string;
     compact?: boolean;
-    items: JSX.Element[];
+    leftItems?: JSX.Element[];
+    rightItems?: JSX.Element[];
 };
 
 export const RzxToolbar = (props: RzxToolbarProps) => {
@@ -14,9 +15,16 @@ export const RzxToolbar = (props: RzxToolbarProps) => {
     return (
         <div className={className}>
             <div className={`rzx-toolbar__title ${compact ? 'compact' : ''}`}>{props.title}</div>{' '}
-            <div className={'rzx-toolbar__items'}>
-                {props.items?.map((item, idx) => (
-                    <div className="rzx-toolbar__items__item-container" key={idx}>
+            <div className={'rzx-toolbar__left-items'}>
+                {props.leftItems?.map((item, idx) => (
+                    <div className="rzx-toolbar__item-container" key={idx}>
+                        {item}
+                    </div>
+                ))}
+            </div>
+            <div className={'rzx-toolbar__right-items'}>
+                {props.rightItems?.map((item, idx) => (
+                    <div className="rzx-toolbar__item-container" key={idx}>
                         {item}
                     </div>
                 ))}

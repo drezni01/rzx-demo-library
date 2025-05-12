@@ -16,6 +16,7 @@ export class RzxCommonDialogModel {
     @observable message: string;
     @observable icon: IconProp;
     @observable hasCancelButton: boolean;
+    @observable hasEmailButton: boolean;
     additionalClass: string;
     private resolver: (value: boolean) => void;
 
@@ -36,6 +37,8 @@ export class RzxCommonDialogModel {
         if (props.isWarn) this.icon = faWarning;
         this.additionalClass = props.isError ? 'error' : props.isConfirm ? 'confirm' : 'info';
         if (props.isWarn) this.additionalClass = 'warn';
+
+        this.hasEmailButton = props.isError;
 
         return new Promise(r => (this.resolver = r));
     }

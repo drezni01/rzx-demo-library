@@ -1,29 +1,59 @@
 import './Code.scss';
 import {RzxToolbar} from '../toolbar/RzxToolbar';
-import {RzxCodeSnippet} from '../codeSnippet/RzxCodeSnippet';
+import {RzxCodeCard} from '../codeSnippet/RzxCodeCard';
 
 export function Code() {
     return (
         <>
-            <RzxToolbar title="Component usage examples" items={[]} />
+            <RzxToolbar title="Component usage examples" />
             <div className="code-page">
-                <RzxCodeSnippet title="Toolbar Component" code={toolbarCode} readOnly={true} height={200} width={500} />
-                <RzxCodeSnippet title="Button Component" code={buttonCode} readOnly={true} height={200} width={500} />
-                <RzxCodeSnippet title="Grid Component" code={gridCode} readOnly={true} height={200} width={500} />
-                <RzxCodeSnippet
+                <RzxCodeCard
+                    title="Toolbar Component"
+                    code={toolbarCode}
+                    readOnly={true}
+                    height={200}
+                    width={500}
+                    margin={{top: 10, bottom: 10, left: 10, right: 10}}
+                />
+                <RzxCodeCard
+                    title="Button Component"
+                    code={buttonCode}
+                    readOnly={true}
+                    height={200}
+                    width={500}
+                    margin={{top: 10, bottom: 10, left: 10, right: 10}}
+                />
+                <RzxCodeCard
+                    title="Grid Component"
+                    code={gridCode}
+                    readOnly={true}
+                    height={200}
+                    width={500}
+                    margin={{top: 10, bottom: 10, left: 10, right: 10}}
+                />
+                <RzxCodeCard
                     title="Code Snippet Component"
                     code={codeCode}
                     readOnly={true}
                     height={200}
                     width={500}
+                    margin={{top: 10, bottom: 10, left: 10, right: 10}}
                 />
-                <RzxCodeSnippet title="Dialog API" code={dialogCode} readOnly={true} height={200} width={500} />
-                <RzxCodeSnippet
+                <RzxCodeCard
+                    title="Dialog API"
+                    code={dialogCode}
+                    readOnly={true}
+                    height={200}
+                    width={500}
+                    margin={{top: 10, bottom: 10, left: 10, right: 10}}
+                />
+                <RzxCodeCard
                     title="Styling via CSS variables"
                     code={cssCode}
                     readOnly={true}
                     height={200}
                     width={500}
+                    margin={{top: 10, bottom: 10, left: 10, right: 10}}
                 />
             </div>
         </>
@@ -80,7 +110,7 @@ const cssCode = `body {
 }
 `;
 
-const dialogCode = `const confirm = await appModel.confirm(\`Remove folder \${folder}?\`);
+const dialogCode = `const confirm = await rzxAppModel.confirm(\`Remove folder \${folder}?\`);
 rzxAppModel.info('Request submitted');
 rzxAppModel.error('Stack trace', 'Application Error');
 `;

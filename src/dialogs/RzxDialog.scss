@@ -1,6 +1,6 @@
 .common-dialog {
   width: 350px;
-  height: 150px;
+  height: 200px;
 
   &.info {
     .bp5-dialog-header {
@@ -49,14 +49,6 @@
 
     button {
       float: right;
-    }
-  }
-
-  &__buttons {
-    padding: var(--rzx-padding);
-    background-color: var(--rzx-toolbar-color);
-    .rzx-button {
-      margin-left: var(--rzx-margin);
     }
   }
 }

@@ -25,3 +25,10 @@ export enum VisualIntent {
     WARNING = 'warning',
     DANGER = 'danger'
 }
+
+export type MarginSpec = {
+    top?: number;
+    right?: number;
+    bottom?: number;
+    left?: number;
+};
