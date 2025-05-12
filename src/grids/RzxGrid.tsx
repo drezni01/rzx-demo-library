@@ -23,7 +23,7 @@ export const RzxGrid = (props: RzxGridProps) => {
     );
 
     return (
-        <div className={className} style={{height: 500}}>
+        <div className={className} style={{height: props.height, width: props.width}}>
             <AgGridReact
                 rowData={props.rowData}
                 columnDefs={props.colDefs}
